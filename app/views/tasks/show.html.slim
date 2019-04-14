@@ -6,7 +6,7 @@ table.table.table-.hover
   tbody
     tr
       th= Task.human_attribute_name(:name)
-      td= @task.id
+      td= @task.name
     tr
       th= Task.human_attribute_name(:description)
       td= simple_format(h(@task.description), {}, sanitize: false, wrapper_tag: "div")
