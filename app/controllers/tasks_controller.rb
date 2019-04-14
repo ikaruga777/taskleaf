@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TasksController < ApplicationController
   def index
   end
@@ -14,7 +16,7 @@ class TasksController < ApplicationController
 
   private
 
-  def task_params
-    params.require(:task).permit(:name, :description)
-  end
+    def task_params
+      params.require(:task).permit(:name, :description)
+    end
 end
