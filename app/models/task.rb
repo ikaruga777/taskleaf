@@ -7,6 +7,6 @@ class Task < ApplicationRecord
   private
 
     def validate_name_not_including_comma
-      name.include? ','
+      name.include? ","
     end
 end
