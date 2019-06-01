@@ -15,11 +15,15 @@
 # gem 'pg'
 #
 default: &default
+  host: db
   adapter: postgresql
   encoding: unicode
+  username: postgres
+  password: postgres
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  prepared_statemants: false
 
 development:
   <<: *default
@@ -81,5 +85,4 @@ test:
 production:
   <<: *default
   database: taskleaf_production
-  username: taskleaf
-  password: <%= ENV['TASKLEAF_DATABASE_PASSWORD'] %>
+
