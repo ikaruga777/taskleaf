@@ -1,7 +1,7 @@
 FROM ruby:2.6.3
 
 RUN apt-get update -qq \
-  && apt-get install -y build-essential libpq-dev postgresql-client \
+  && apt-get install -y postgresql-client \
   && apt-get clean
 
 ENV LANG=C.UTF-8 \
